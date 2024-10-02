@@ -1,0 +1,104 @@
+{
+  "name": "workspace-shortcut",
+  "displayName": "Workspace Shortcut",
+  "description": "Makes switching workspaces easier",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alangastaldi/WorkspaceShortcut.git"
+  },
+  "author": {
+    "name": "Alan Gastaldi Luna",
+    "email": "email@alangastaldi.com"
+  },
+  "publisher": "AlanGastaldi",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "workspace-shortcut.changeWorkspace",
+      "title": "Workspace Shortcut: Change Workspace"
+    },{
+      "command": "workspace-shortcut.configFolders",
+      "title": "Workspace Shortcut: Config Workspace's Folders"
+    },
+    {
+      "command": "workspace-shortcut.fastChange1",
+      "title": "Workspace Shortcut: Fast Change 1"
+    },
+    {
+      "command": "workspace-shortcut.fastChange2",
+      "title": "Workspace Shortcut: Fast Change 2"
+    },
+    {
+      "command": "workspace-shortcut.fastChange3",
+      "title": "Workspace Shortcut: Fast Change 3"
+    },
+    {
+      "command": "workspace-shortcut.fastChange4",
+      "title": "Workspace Shortcut: Fast Change 4"
+    },
+    {
+      "command": "workspace-shortcut.fastChange5",
+      "title": "Workspace Shortcut: Fast Change 5"
+    },
+    {
+      "command": "workspace-shortcut.fastChange6",
+      "title": "Workspace Shortcut: Fast Change 6"
+    },
+    {
+      "command": "workspace-shortcut.fastChange7",
+      "title": "Workspace Shortcut: Fast Change 7"
+    },
+    {
+      "command": "workspace-shortcut.fastChange8",
+      "title": "Workspace Shortcut: Fast Change 8"
+    },
+    {
+      "command": "workspace-shortcut.fastChange9",
+      "title": "Workspace Shortcut: Fast Change 9"
+    }],
+    "keybindings": [
+      {"command": "workspace-shortcut.fastChange1", "key": "ctrl+alt+numpad1", "mac": "cmd+alt+mumpad1"},
+      {"command": "workspace-shortcut.fastChange2", "key": "ctrl+alt+numpad2", "mac": "cmd+alt+mumpad2"},
+      {"command": "workspace-shortcut.fastChange3", "key": "ctrl+alt+numpad3", "mac": "cmd+alt+mumpad3"},
+      {"command": "workspace-shortcut.fastChange4", "key": "ctrl+alt+numpad4", "mac": "cmd+alt+mumpad4"},
+      {"command": "workspace-shortcut.fastChange5", "key": "ctrl+alt+numpad5", "mac": "cmd+alt+mumpad5"},
+      {"command": "workspace-shortcut.fastChange6", "key": "ctrl+alt+numpad6", "mac": "cmd+alt+mumpad6"},
+      {"command": "workspace-shortcut.fastChange7", "key": "ctrl+alt+numpad7", "mac": "cmd+alt+mumpad7"},
+      {"command": "workspace-shortcut.fastChange8", "key": "ctrl+alt+numpad8", "mac": "cmd+alt+mumpad8"},
+      {"command": "workspace-shortcut.fastChange9", "key": "ctrl+alt+numpad9", "mac": "cmd+alt+mumpad9"},
+      {"command": "workspace-shortcut.changeWorkspace", "key": "ctrl+alt+numpad0", "mac": "cmd+alt+mumpad0"}
+    ],
+    "configuration": {
+      "title": "Workspace Shortcut",
+      "type": "object",
+      "properties": {
+        "workspace-shortcut.folders": {
+          "order": 0,
+          "type": "array",
+          "title": "Folder List",
+          "description": "List of workspace's folders.",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.93.0",
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "eslint": "^9.11.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
